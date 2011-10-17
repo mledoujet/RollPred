@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<java version="1.7.0" class="java.beans.XMLDecoder">
+ <object class="models.metier.Recette" id="Recette0">
+  <void class="models.metier.Recette" method="getField">
+   <string>nombrePersonne</string>
+   <void method="set">
+    <object idref="Recette0">
+     <void class="models.metier.Recette" method="getField">
+      <string>modeOperatoire</string>
+      <void method="set">
+       <object idref="Recette0">
+        <void class="models.metier.Recette" method="getField">
+         <string>dureeCuisson</string>
+         <void method="set">
+          <object idref="Recette0">
+           <void class="models.metier.Recette" method="getField">
+            <string>tempCuisson</string>
+            <void method="set">
+             <object idref="Recette0">
+              <void class="models.metier.Recette" method="getField">
+               <string>typeCuisson</string>
+               <void method="set">
+                <object idref="Recette0">
+                 <void class="models.metier.Plat" method="getField">
+                  <string>libellePlat</string>
+                  <void method="set">
+                   <object idref="Recette0"/>
+                   <string>Omelette</string>
+                  </void>
+                 </void>
+                </object>
+                <string>poele</string>
+               </void>
+              </void>
+             </object>
+             <int>100</int>
+            </void>
+           </void>
+          </object>
+          <int>40</int>
+         </void>
+        </void>
+       </object>
+       <string>M�langer les oeufs</string>
+      </void>
+     </void>
+    </object>
+    <int>4</int>
+   </void>
+  </void>
+ </object>
+</java>
