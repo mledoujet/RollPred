@@ -1,0 +1,146 @@
+
+html, body {
+    background: #a0a0a0 !important;
+    font-family: Helvetica, Arial, Sans !important;
+    margin: 5px;
+}
+
+#pagewidth {
+	max-width: 100%;
+	min-width: 95%;
+}
+
+#header {
+	padding : 10px;
+	margin-bottom: 10px;
+	position: relative;
+	background-color: #a0a0a0;
+	width: 99%;
+	display: block;
+	overflow: auto;
+	border: 1px solid black;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+}
+
+#leftcol {
+	width: 14%;
+	float: left;
+	position: relative;
+	background: #a0a0a0;
+	height: 800px;
+}
+
+#twocols {
+	width: 85%;
+	float: right;
+	position: relative;
+}
+
+#rightcol {
+	width: 15%;
+	height: 800px;
+	float: right;
+	position: relative;
+	border: 1px solid black;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+}
+
+#maincol {
+	background-color: #a0a0a2;
+	float: left;
+	position: relative;
+	width: 84%;
+	height : 100%;
+	border: 1px solid black;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	height: 800px;
+}
+
+#leftpanel {
+	width: 14%;
+	height: 800px;
+	float: left;
+	position: relative;
+	border: 1px solid black;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+}
+
+/* Logo */
+
+#logo {
+    display: block;
+    height: 49px;
+    margin-left: 20px;
+    color: #fff;
+    font-size: 48px;
+    font-weight: bold;
+    letter-spacing: -4px;
+    text-shadow: 1px 2px 2px #000;
+}
+
+#logo span {
+    color: #f00;
+    font-size: 70%;
+}
+
+/* animation slide */
+a:focus {
+	outline: none;
+}
+
+.slide {
+	margin: 0;
+	padding: 0;
+	border-top: solid 1px red;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+}
+
+.btn-slide {
+	display: block;
+}
+
+.active {
+	background-position: right 12px;
+}
+
+/* afficahgfe des repas */
+
+.jour{
+	margin: 3px;
+	padding : 3px;
+	width : 14%;
+	heght : 90%;
+	border: 1px solid black;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+}
+
+.repas{
+	margin: 3px;
+	padding : 3px;
+	width : 14%;
+	heght : 50%;
+	border: 1px solid black;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+}
+	
