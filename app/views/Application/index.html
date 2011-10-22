@@ -3,7 +3,7 @@
 
 <div id="pagewidth">
 	<div id="header">
-		<p id='logo'>LeSemainier.com</p>
+		<p id='logo'>RollPred</p>
 	</div>
 	<div id="wrapper" class="clearfix">
 		<div id="twocols">
@@ -40,16 +40,17 @@
 			</div>
 
 			<div id="rightcol">
-				<h2>right Column</h2>
-				<p>Nullam dictum feli.</p>
+				<b>Liste des courses :</b>
+				<p>3kg tomates</p>
+				<p>3kg carottes</p>
+				<p>15 citrons</p>
+				<p>300g farine</p>
+				<p>125g viande hachée</p>
 			</div>
-
 		</div>
+		<a class="righttrigger trigger" href="#">liste des courses</a>
+		<a class="lefttrigger trigger" href="#">explorateur</a>
 		<div id="leftpanel">
-			<p class="slide">
-				<a href="#" class="btn-slide">x</a>
-			</p>
-			<div id="leftCol">
 				<ul>
 					<li id='listeRecettes'><a href="#">Recettes</a>
 						<ul>
@@ -69,8 +70,7 @@
 							<li id="plat"><a href="#">plat</a></li>
 							<li id="entrée"><a href="#">entree</a></li>
 						</ul></li>
-					<ul>
-			</div>
+				<ul>
 		</div>
 	</div>
 </div>
@@ -80,13 +80,20 @@
 
 
 <script type="text/javascript">
-$(document).ready(function(){
-
-	$(".btn-slide").click(function(){
-		$("#leftcol").slideToggle("slow");
-		$(this).toggleClass("active"); return false;
-	});	 
-	
-
-});
+	$(document).ready(function(){
+	    $(".righttrigger").click(function(){	        
+	    	$("#rightcol").toggle("fast");
+	        $(this).toggleClass("active");
+	        return false;
+	    });
+	});
+</script>
+<script type="text/javascript">
+	$(document).ready(function(){
+	    $(".lefttrigger").click(function(){	        
+	    	$("#leftpanel").toggle("fast");
+	        $(this).toggleClass("active");
+	        return false;
+	    });
+	});
 </script>

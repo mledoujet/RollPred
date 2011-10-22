@@ -2,6 +2,7 @@
 
 <html>
     <head>
+    <meta charset="UTF-8" />
         <title>#{get 'title' /}</title>
         <link rel="stylesheet" media="screen" href="@{'/public/stylesheets/main.css'}">
         #{get 'moreStyles' /}
@@ -17,7 +18,7 @@
     </body>
 
 <script type="text/javascript"> $(function() {
-$("#leftCol").jstree(
+$("#leftpanel").jstree(
 		{
 			"plugins" : ["themes","html_data","ui","crrm","hotkeys"],
 		 	"core" : { "initially_open" : [ "listeRecettes" ] }
