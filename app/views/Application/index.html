@@ -1,99 +1,186 @@
 #{extends 'main.html' /} #{set title:'RollPred' /}
 
 
-<div id="pagewidth">
-	<div id="header">
-		<p id='logo'>RollPred</p>
+	<div id="top">
+			<p id='logo' href="/">RollPred</p>
 	</div>
-	<div id="wrapper" class="clearfix">
-		<div id="twocols">
-			<div id="maincol">
-				<h1>Main Content Column</h1>
-				<div class=".jour" id="jour1">
-					<div class="repas">repas midi</div>
-					<div class="repas">repas soir</div>
-				</div>
-				<div class=".jour" id="jour1">
-					<div class="repas">repas midi</div>
-					<div class="repas">repas soir</div>
-				</div>
-				<div class=".jour" id="jour1">
-					<div class="repas">repas midi</div>
-					<div class="repas">repas soir</div>
-				</div>
-				<div class=".jour" id="jour1">
-					<div class="repas">repas midi</div>
-					<div class="repas">repas soir</div>
-				</div>
-				<div class=".jour" id="jour1">
-					<div class="repas">repas midi</div>
-					<div class="repas">repas soir</div>
-				</div>
-				<div class=".jour" id="jour1">
-					<div class="repas">repas midi</div>
-					<div class="repas">repas soir</div>
-				</div>
-				<div class=".jour" id="jour1">
-					<div class="repas">repas midi</div>
-					<div class="repas">repas soir</div>
-				</div>
-			</div>
 
-			<div id="rightcol">
-				<b>Liste des courses :</b>
-				<p>3kg tomates</p>
-				<p>3kg carottes</p>
-				<p>15 citrons</p>
-				<p>300g farine</p>
-				<p>125g viande hachée</p>
+	<div id="leftlateral" class="lateral">
+		<ul>
+			<li id='listRecettes'>
+				<a href="">Recettes</a>
+		<ul>
+						<li id="dessert"><a href="">Dessert</a></li>
+						<li id="plat"><a href="">plat</a></li>
+						<li id="entrée"><a href="">entree</a></li>
+						<li id="dessert"><a href="">Dessert</a></li>
+						<li id="plat"><a href="">plat</a></li>
+						<li id="entrée"><a href="">entree</a></li>
+						<li id="dessert"><a href="">Dessert</a></li>
+						<li id="plat"><a href="">plat</a></li>
+						<li id="entrée"><a href="">entree</a></li>
+						<li id="dessert"><a href="">Dessert</a></li>
+						<li id="plat"><a href="">plat</a></li>
+						<li id="entrée"><a href="">entree</a></li>
+						<li id="dessert"><a href="">Dessert</a></li>
+						<li id="plat"><a href="">plat</a></li>
+						<li id="entrée"><a href="">entree</a></li>
+		</ul>
+			</li>
+		</ul>
+	</div>
+
+	<div id="rightlateral" class="lateral">
+		<p>3kg tomates</p>
+		<p>3kg carottes</p>
+		<p>15 citrons</p>
+		<p>300g farine</p>
+		<p>125g viande hachée</p>
+	</div>
+	
+	<div id="content">
+		<div id="lefttoggler" class="toggler" ><span class="text90">Explorateur</span></div>
+		<div id="righttoggler" class="toggler"><span class="text90">Liste</span></div>
+		<div id="render">
+			<i id="tip">tip of the rollpred</i>
+
+			<div class="jour" id="jour1">
+				<div class="repas">repas midi</div>
+				<div class="repas">repas soir</div>
+			</div>
+			<div class="jour" id="jour1">
+				<div class="repas">repas midi</div>
+				<div class="repas">repas soir</div>
+			</div>
+			<div class="jour" id="jour1">
+				<div class="repas">repas midi</div>
+				<div class="repas">repas soir</div>
+			</div>
+			<div class="jour" id="jour1">
+				<div class="repas">repas midi</div>
+				<div class="repas">repas soir</div>
+			</div>
+			<div class="jour" id="jour1">
+				<div class="repas">repas midi</div>
+				<div class="repas">repas soir</div>
+			</div>
+			<div class="jour" id="jour1">
+				<div class="repas">repas midi</div>
+				<div class="repas">repas soir</div>
+			</div>
+			<div class="jour" id="jour1">
+				<div class="repas">repas midi</div>
+				<div class="repas">repas soir</div>
 			</div>
 		</div>
-		<a class="righttrigger trigger" href="#">liste des courses</a>
-		<a class="lefttrigger trigger" href="#">explorateur</a>
-		<div id="leftpanel">
-				<ul>
-					<li id='listeRecettes'><a href="#">Recettes</a>
-						<ul>
-							<li id="dessert"><a href="#">Dessert</a></li>
-							<li id="plat"><a href="#">plat</a></li>
-							<li id="entrée"><a href="#">entree</a></li>
-							<li id="dessert"><a href="#">Dessert</a></li>
-							<li id="plat"><a href="#">plat</a></li>
-							<li id="entrée"><a href="#">entree</a></li>
-							<li id="dessert"><a href="#">Dessert</a></li>
-							<li id="plat"><a href="#">plat</a></li>
-							<li id="entrée"><a href="#">entree</a></li>
-							<li id="dessert"><a href="#">Dessert</a></li>
-							<li id="plat"><a href="#">plat</a></li>
-							<li id="entrée"><a href="#">entree</a></li>
-							<li id="dessert"><a href="#">Dessert</a></li>
-							<li id="plat"><a href="#">plat</a></li>
-							<li id="entrée"><a href="#">entree</a></li>
-						</ul></li>
-				<ul>
-		</div>
+
 	</div>
-</div>
 
-<!-- you can put content here -->
-
-
+	
+	<div id="footer">
+		<span> footer rollpred</span>
+	</div>
 
 <script type="text/javascript">
-	$(document).ready(function(){
-	    $(".righttrigger").click(function(){	        
-	    	$("#rightcol").toggle("fast");
-	        $(this).toggleClass("active");
-	        return false;
-	    });
-	});
-</script>
-<script type="text/javascript">
-	$(document).ready(function(){
-	    $(".lefttrigger").click(function(){	        
-	    	$("#leftpanel").toggle("fast");
-	        $(this).toggleClass("active");
-	        return false;
-	    });
-	});
-</script>
+$(document).ready(function(){
+	
+    /*
+     * VARIABLES GLOBALES
+    */
+    //status de panel lateral: 1 ON (default), 0 OFF
+    var leftstatus = 1;
+    var lefttoggler = $("#lefttoggler");
+    var leftlateral = $("#leftlateral");
+    var leftlateralWidth = leftlateral.width() + "px";
+    
+    var rightstatus = 1;
+    var righttoggler = $("#righttoggler");
+    var rightlateral = $("#rightlateral");
+    var rightlateralWidth = rightlateral.width() + "px";
+    
+    var content = $("#content");
+    var windowHeight = 0;
+    var renderHeight = 0;
+    var togglerHeight = 0;
+
+    /*
+     * au chargement de la page, on adapte les dimensions
+    */
+    calculateDimensions();
+    applyDimensions();
+
+    /*
+     * au redminisionnement de la page
+    */
+    $(window).resize(function(){
+        calculateDimensions();
+        applyDimensions();
+    });
+
+    /*
+     * clique sur un toggler.
+    */
+    lefttoggler.click(clicklefttoggler);
+    righttoggler.click(clickrighttoggler);
+    
+    /*
+     * Controles des elements d'interface.
+    */
+    // calcul des dimensions disponibles.
+    function calculateDimensions(){
+        windowHeight = document.documentElement.clientHeight; //hauteur disponible dans le browser
+        renderHeight = (windowHeight - 51 - 31)  +"px";
+        togglerHeight = (windowHeight - 51 - 31)  +"px";
+        /* ¿De donde salen esos valores a restar? Pues de:
+         * 51: #top: 40px de height, 10px de padding-top, y 1px de border-bottom
+         * 40: #content h2: 40px de height
+         * 31: #footer: 30px de height y 1px de border-top
+        */
+    }
+    // application des dimensions disponibles
+    function applyDimensions(){
+        content.css("height", renderHeight);
+        lefttoggler.css("height", togglerHeight);
+        righttoggler.css("height", togglerHeight);
+        leftlateral.css("height", togglerHeight);
+        rightlateral.css("height", togglerHeight);
+    }
+    
+  
+    // toggler gauche
+    function clicklefttoggler(){
+        //on cache le panneau si affiché
+        if(leftstatus ==1){
+        	leftlateral.hide();
+            content.css("margin-left","0px");
+            lefttoggler.addClass("off");
+            leftstatus = 0;
+        }
+        //on l'affiche s'il est caché
+        else{
+        	leftlateral.show();
+            content.css("margin-left", leftlateralWidth);
+            lefttoggler.removeClass("off");
+            leftstatus = 1;
+        }
+    }
+    
+  //toggler droit
+    function clickrighttoggler(){
+        //on cache le panneau si affiché
+        if(rightstatus ==1){
+        	rightlateral.hide();
+            content.css("margin-right","0px");
+            righttoggler.addClass("off");
+            rightstatus = 0;
+        }
+      //on l'affiche s'il est caché
+        else{
+        	rightlateral.show();
+            content.css("margin-right", rightlateralWidth);
+            righttoggler.removeClass("off");
+            rightstatus = 1;
+        }
+    }
+   
+});</script>
