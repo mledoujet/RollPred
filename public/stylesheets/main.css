@@ -1,87 +1,16 @@
 
-html, body {
-    background: #a0a0a0 !important;
-    font-family: Helvetica, Arial, Sans !important;
-    margin: 5px;
+body {
+	line-height: auto;
+	font-size: 12px;
+	font-family: Helvetica, Arial, sans-serif;
 }
 
-#pagewidth {
-	max-width: 100%;
-	min-width: 95%;
-}
-
-#header {
-	padding : 10px;
-	margin-bottom: 10px;
-	position: relative;
-	background-color: #a0a0a0;
-	width: 99%;
-	display: block;
-	overflow: auto;
-	border: 1px solid black;
-	-moz-border-radius: 10px;
-	-webkit-border-radius: 10px;
-	-moz-border-radius: 10px;
-	-webkit-border-radius: 10px;
-}
-
-#leftcol {
-	width: 14%;
-	float: left;
-	position: relative;
-	background: #a0a0a0;
-	height: 800px;
-}
-
-#twocols {
-	width: 85%;
-	float: right;
-	position: relative;
-}
-
-#rightcol {
-	width: 15%;
-	height: 800px;
-	float: right;
-	position: relative;
-	border: 1px solid black;
-	-moz-border-radius: 10px;
-	-webkit-border-radius: 10px;
-	-moz-border-radius: 10px;
-	-webkit-border-radius: 10px;
-}
-
-#maincol {
-	background-color: #a0a0a2;
-	float: left;
-	position: relative;
-	width: 84%;
-	height : 100%;
-	border: 1px solid black;
-	-moz-border-radius: 10px;
-	-webkit-border-radius: 10px;
-	-moz-border-radius: 10px;
-	-webkit-border-radius: 10px;
-	height: 800px;
-}
-
-#leftpanel {
-	width: 14%;
-	height: 800px;
-	float: left;
-	position: relative;
-	border: 1px solid black;
-	-moz-border-radius: 10px;
-	-webkit-border-radius: 10px;
-	-moz-border-radius: 10px;
-	-webkit-border-radius: 10px;
-}
-
-/* Logo */
-
+/*logo du site */
 #logo {
+    position: fixed;
     display: block;
-    height: 49px;
+    margin:0px;
+    margin-bottom:10px;
     margin-left: 20px;
     color: #fff;
     font-size: 48px;
@@ -90,57 +19,101 @@ html, body {
     text-shadow: 1px 2px 2px #000;
 }
 
-#logo span {
-    color: #f00;
-    font-size: 70%;
+/*structure*/
+#top {
+	text-align: center;
+    background: #C2CFF1;
+    height: 50px;
+    padding: 5px 5px 0;
 }
 
-/* animation slide */
-a:focus {
-	outline: none;
+#footer {
+	width: 100%;
+    height: 30px;
+    text-align: center;
+    background: #C2CFF1;
+    position: fixed;
+    bottom:0;
+}
+#footer span{
+    padding-right: 10px;
 }
 
-.slide {
-	margin: 0;
-	padding: 0;
-	border-top: solid 1px red;
-	-moz-border-radius: 10px;
-	-webkit-border-radius: 10px;
-	-moz-border-radius: 10px;
-	-webkit-border-radius: 10px;
+#content {
+	position: relative;
+	text-align:center;
+	margin-left: 210px;
+	margin-right:130px;
+	height: 600px;
+}
+#content #render{
+    height: 100%;
+    overflow: hidden;
+    text-align:center;
+}
+#content #tip{
+    display: none;
+    padding: 20px;
 }
 
-.btn-slide {
-	display: block;
+.toggler{  
+	background: #EBEFF9  no-repeat left center;
+	height:600px;
+	width:16px;
+    border-right: 1px solid #c2cff1;
+    border-left: 1px solid #C2CFF1;
+    text-align: center;
+    font-weight: 800;
+}
+.toggler:hover{  
+     background: #c2cff1;  
+     cursor: pointer;  
+}
+#lefttoggler{
+   float: left;   
+}
+#righttoggler{
+   float: right;
 }
 
-.active {
-	background-position: right 12px;
+.text90{
+	-webkit-transform: rotate(-90deg)  translate(-150px,0px);
+	-moz-transform: rotate(-90deg)  translate(-150px,0px);
+	filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+   	-webkit-transform-origin:left top;
+   	-moz-transform-origin:left top;
 }
 
-/* afficahgfe des repas */
+/*panneaux lateraux*/
+.lateral {
+	padding-left:5px;	
+}
+#rightlateral {
+	width: 120px;
+	float: right;
+}
+#leftlateral {
+	width: 200px;
+	float: left;
+}
 
-.jour{
-	margin: 3px;
-	padding : 3px;
-	width : 14%;
-	heght : 90%;
+/* tip */
+
+
+/* coeur de page : semainier*/
+.jour {
+	display: inline-block;
+	padding: 3px;
+	margin: 5px;
+	width: 12.5%;
+}
+
+.repas {
+	width: 100%;
+	height: 100px;
+	margin-bottom: 3px;
 	border: 1px solid black;
-	-moz-border-radius: 10px;
-	-webkit-border-radius: 10px;
-	-moz-border-radius: 10px;
-	-webkit-border-radius: 10px;
+	background-color: #C2CFF1;
+	text-align: center;
+	vertical-align: center;
 }
-
-.repas{
-	margin: 3px;
-	padding : 3px;
-	width : 14%;
-	heght : 50%;
-	border: 1px solid black;
-	-moz-border-radius: 10px;
-	-webkit-border-radius: 10px;
-	-moz-border-radius: 10px;
-	-webkit-border-radius: 10px;
-}
-	
