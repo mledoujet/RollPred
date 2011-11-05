@@ -4,6 +4,11 @@
 	<div id="top">
 			<p id='logo' href="/">RollPred</p>
 	</div>
+	
+	<div id="buttonbar">
+	<input type="button" value="File"/>
+	<input type="button" value="Recette"/>
+	</div>
 
 	<div id="leftlateral" class="lateral">
 		<ul>
@@ -39,39 +44,30 @@
 	</div>
 	
 	<div id="content">
-		<div id="lefttoggler" class="toggler" ><span class="text90">Explorateur</span></div>
-		<div id="righttoggler" class="toggler"><span class="text90">Liste</span></div>
+		<div id="lefttoggler" class="toggler" ><span class="text90">Explorateur de Recettes</span></div>
+		<div id="righttoggler" class="toggler"><span class="text90">Liste des Courses</span></div>
 		<div id="render">
 			<i id="tip">tip of the rollpred</i>
 
-			<div class="jour" id="jour1">
-				<div class="repas">repas midi</div>
-				<div class="repas">repas soir</div>
-			</div>
-			<div class="jour" id="jour1">
-				<div class="repas">repas midi</div>
-				<div class="repas">repas soir</div>
-			</div>
-			<div class="jour" id="jour1">
-				<div class="repas">repas midi</div>
-				<div class="repas">repas soir</div>
-			</div>
-			<div class="jour" id="jour1">
-				<div class="repas">repas midi</div>
-				<div class="repas">repas soir</div>
-			</div>
-			<div class="jour" id="jour1">
-				<div class="repas">repas midi</div>
-				<div class="repas">repas soir</div>
-			</div>
-			<div class="jour" id="jour1">
-				<div class="repas">repas midi</div>
-				<div class="repas">repas soir</div>
-			</div>
-			<div class="jour" id="jour1">
-				<div class="repas">repas midi</div>
-				<div class="repas">repas soir</div>
-			</div>
+			#{list items:1..7, as:'i'}
+				<div class="jour draggable" id="jour${i}">
+					<div class="repas draggable">
+						<p id="entree" class="element draggable">huitres</p>
+						<p> ---- </p>
+						<p id="plat" class="element draggable">raviloi aux agrumes</p>
+						<p> ---- </p>
+						<p id="dessert" class="element draggable">pommes farcies aux noix</p>
+					</div>
+					<div class="repas draggable">
+						<p id="entree"  class="element draggable">pamplemousse</p>
+						<p> ---- </p>
+						<p id="plat"  class="element draggable">steak frites champignons</p>
+						<p> ---- </p>
+						<p id="dessert"  class="element draggable">danette</p>
+					</div>
+				</div>
+			#{/list}
+			
 		</div>
 
 	</div>
@@ -102,6 +98,9 @@ $(document).ready(function(){
     var windowHeight = 0;
     var renderHeight = 0;
     var togglerHeight = 0;
+    var windowWidth = 0;
+    var renderWidth = 0;
+    var togglerWidth = 0;
 
     /*
      * au chargement de la page, on adapte les dimensions
@@ -129,13 +128,13 @@ $(document).ready(function(){
     // calcul des dimensions disponibles.
     function calculateDimensions(){
         windowHeight = document.documentElement.clientHeight; //hauteur disponible dans le browser
-        renderHeight = (windowHeight - 51 - 31)  +"px";
-        togglerHeight = (windowHeight - 51 - 31)  +"px";
-        /* ¿De donde salen esos valores a restar? Pues de:
+        renderHeight = (windowHeight - 51 - 25 - 31)  +"px";
+        togglerHeight = (windowHeight - 51 - 25 - 31)  +"px";
+		/*
          * 51: #top: 40px de height, 10px de padding-top, y 1px de border-bottom
          * 40: #content h2: 40px de height
          * 31: #footer: 30px de height y 1px de border-top
-        */
+        */       
     }
     // application des dimensions disponibles
     function applyDimensions(){
@@ -181,6 +180,10 @@ $(document).ready(function(){
             righttoggler.removeClass("off");
             rightstatus = 1;
         }
+        windowWidth = document.documentElement.clientWidth; //largeur disponible dans le browser
+        footerWidth=document.getElementById("footer").width
+        //alert("windowWidth : "+windowWidth+"\n footerWidth:" +footerWidth)
+        renderWidth = (windowWidth - 140 - 200)  +"px";
     }
    
 });</script>
