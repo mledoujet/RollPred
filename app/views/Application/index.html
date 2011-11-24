@@ -1,90 +1,128 @@
 #{extends 'main.html' /} #{set title:'RollPred' /}
 
 
-	<div id="top">
-			<p id='logo' href="/">RollPred</p>
-	</div>
-	
-	<div id="buttonbar">
-	<input type="button" value="File"/>
-	<input type="button" value="Recette"/>
-	</div>
+<div id="top">
+	<p id='logo' href="/">RollPred</p>
+</div>
 
-	<div id="leftlateral" class="lateral">
-		<ul>
-			<li id='listRecettes'>
-				<a href="">Recettes</a>
-		<ul>
-						<li id="dessert"><a href="">Dessert</a></li>
-						<li id="plat"><a href="">plat</a></li>
-						<li id="entrée"><a href="">entree</a></li>
-						<li id="dessert"><a href="">Dessert</a></li>
-						<li id="plat"><a href="">plat</a></li>
-						<li id="entrée"><a href="">entree</a></li>
-						<li id="dessert"><a href="">Dessert</a></li>
-						<li id="plat"><a href="">plat</a></li>
-						<li id="entrée"><a href="">entree</a></li>
-						<li id="dessert"><a href="">Dessert</a></li>
-						<li id="plat"><a href="">plat</a></li>
-						<li id="entrée"><a href="">entree</a></li>
-						<li id="dessert"><a href="">Dessert</a></li>
-						<li id="plat"><a href="">plat</a></li>
-						<li id="entrée"><a href="">entree</a></li>
-		</ul>
-			</li>
-		</ul>
-	</div>
+#{menu/}
 
-	<div id="rightlateral" class="lateral">
-		<ul id='listeDesCourses'>
-			<li>3kg tomates</li>
-			<li>3kg carottes</li>
-			<li>1 citron</li>
-			<li>300g farine</li>
-			<li>beurre</li>
-			<li>125g viande hachee</li>
-		</ul>
-		<script type="text/javascript">
+
+
+<div id="leftlateral" class="lateral">
+	<ul>
+		<li id="entrees">
+			<a href="">Entrees</a>
+			<ul>
+				<li><a href="" onclick='alert("carootes");' >carotte rapées</a></li>
+				<li><a href="">friand fromage</a></li>
+				<li><a href="">pamplemousse</a></li>
+			</ul>
+		</li>
+		
+		<li id="plats">
+			<a href="">Plats</a>
+			<ul>
+				<li><a href="">pot au feu</a></li>
+				<li><a href="">canard a l'orange</a></li>
+				<li><a href="">crepes</a></li>
+				<li><a href="">boudin purée</a></li>
+			</ul>				
+		</li>
+		<li id="desserts">
+			<a href="">Desserts</a>
+			<ul>
+				<li><a href="">chou a la creme</a></li>
+				<li><a href="">salade de fruit</a></li>
+				<li><a href="">gateau breton</a></li>
+				<li><a href="">mousse au chocolat</a></li>
+			</ul>
+		</li>
+		<li id="fruits">
+			<a href="">Fruits</a>
+			<ul>
+				<li><a href="">pomme</a></li>
+				<li><a href="">Banane</a></li>
+				<li><a href="">fraise</a></li>
+				<li><a href="">orange</a></li>
+			</ul>
+		</li>				
+	</ul>
+</div>
+
+<div id="rightlateral" class="lateral">
+	<ul id='listeDesCourses'>
+		<li>3kg tomates</li>
+		<li>3kg carottes</li>
+		<li>1 citron</li>
+		<li>300g farine</li>
+		<li>beurre</li>
+		<li>125g viande hachee</li>
+	</ul>
+	<script type="text/javascript">
 		$("#listeDesCourses:first").dragsort();
 	</script>
-	</div>
-	
-	<div id="content">
-		<div id="lefttoggler" class="toggler" ><span class="text90">Explorateur de Recettes</span></div>
-		<div id="righttoggler" class="toggler"><span class="text90">Liste des Courses</span></div>
-		<div id="render" >
-			<i id="tip">tip of the rollpred</i>
+</div>
 
-			#{list items:1..7, as:'i'}
-				<div class="jour" id="jour${i}">
-					<div id="repas_midi${i}" class="repas" draggable="true">					
-						<header>midi</header>
-						<p id="entree${i}" class="element" >huitres ${i}</p>
-						<p> ---- </p>
-						<p id="plat${i}" class="element" >raviloi aux agrumes ${i}</p>
-						<p> ---- </p>
-						<p id="dessert${i}" class="element">pommes farcies aux noix ${i}</p>
-					</div>
-					<div id="repas_soir${i}" class="repas" draggable="true">
-						<header>soir</header>
-						<p id="entree${i}s" class="element" >huitres ${i}</p>
-						<p> ---- </p>
-						<p id="plat${i}s" class="element" >raviloi aux agrumes ${i}</p>
-						<p> ---- </p>
-						<p id="dessert${i}s" class="element">pommes farcies aux noix ${i}</p>
-					</div>
+<div id="content">
+	<div id="lefttoggler" class="toggler">
+		<span class="text90">Explorateur de Recettes</span>
+	</div>
+	<div id="righttoggler" class="toggler">
+		<span class="text90">Liste des Courses</span>
+	</div>
+	<div id="render">
+		<i id="tip">tip of the rollpred</i>
+		
+		<ul id="midis" class="menu">
+		 #{list items:1..7, as:'i'}
+			<li>
+				<div id="boite_repas${i}" class="repas" draggable="true">
+					<header>midi</header>
+					<ul id='repas_midi${i}' class="li_repas">
+						<li>huitres ${i}</li>
+						<li>----</li>
+						<li>raviloi aux agrumes ${i}</li>
+						<li>----</li>
+						<li>pommes farcies aux noix	${i}</li>
+					</ul>
+
 				</div>
+			</li>
 			#{/list}
-			
-		</div>
-	
+		</ul>
+		<ul id="soirs" class="menu">
+			#{list items:1..7, as:'i'}
+			<li>
+				<div id="repas_soir${i}" class="repas" draggable="true">
+					<header>soirs</header>
+					<ul id='repas_soir${i}'class="li_repas" >
+						<li>huitres ${i}</li>
+						<li>----</li>
+						<li>raviloi aux agrumes ${i}</li>
+						<li>----</li>
+						<li>pommes farcies aux noix	${i}</li>
+					</ul>
+				</div>
+			</li>
+			#{/list}
+		</ul>
+
+
 	</div>
-	<script type="text/javascript">
-		$("#render).dragsort({ dragSelector: "div", dragBetween: true, dragEnd: saveOrder, placeHolderTemplate: "<li class='placeHolder'><div></div></li>" });
-	</script>
-	
-	<div id="footer">
-		<span> footer rollpred</span>
-	</div>
+
+</div>
+<script type="text/javascript">
+		$("#soirs, #midis").dragsort({ dragSelector: "div", dragBetween: true, dragEnd: saveOrder, placeHolderTemplate: "<li class='placeHolder'><div></div></li>" });
+		
+		function saveOrder() {
+			var serialStr = "";
+			$("#menu li").each(function(i, elm) { serialStr += (i > 0 ? "|" : "") + $(elm).children().html(); });
+			$("input[name=menuSortOrder]").val(serialStr);
+		};</script>
+
+<div id="footer">
+	<span> footer rollpred</span>
+</div>
 
 <script src="@{'/public/javascripts/scripts.mainscreen.rollpred.js'}"></script>

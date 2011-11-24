@@ -12,8 +12,12 @@
         <script src="@{'/public/javascripts/jquery.hotkeys.js'}"></script>
         <script src="@{'/public/javascripts/jquery.jstree.js'}"></script>
         <script src="@{'/public/javascripts/jquery.dragsort-0.3.10.min.js'}"></script>
-        #{get 'moreScripts' /}
+
+        
+       
+        
     </head>
+
     <body>
         #{doLayout /}
     </body>
@@ -22,7 +26,7 @@
 $("#leftlateral").jstree(
 		{
 			"plugins" : ["themes","html_data","ui","crrm","hotkeys"],
-		 	"core" : { "initially_open" : [ "listeRecettes" ] }
+		 	"core" : { "initially_open" : [ "fruits","desserts","plats","entrees" ] }
 		})
 		.bind("select_node.jstree", function (event, data) {
 			// `data.rslt.obj` is the jquery extended node that was clicked

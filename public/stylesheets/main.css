@@ -23,14 +23,8 @@ body {
 	text-align: center;
     background: #C2CFF1;
     height: 50px;
+    padding:5px;
 
-}
-#buttonbar{
-	padding-bottom: 5px;
-	padding-top : 5px;
-	height: 25px;
-	background: #C2CFF1;
-	/*  border: solid 1px green;*/
 }
 
 #footer {
@@ -106,28 +100,19 @@ body {
 	border-left : solid 1px #c2cff1;
 }
 
-/* dnd
-[draggable] {
-  -moz-user-select: none;
-  -khtml-user-select: none;
-  -webkit-user-select: none;
-  user-select: none;
-}*/
-
+#render{
+	width:100%;
+	height:100%;
+}
 /* tip */
 
-
-/* coeur de page : semainier*/
-.jour {
-	border : solid 1px green;
-	display: inline-block;
-	padding: 3px;
-	margin: 5px;
-	width: 12.5%;
-
+#listeDesCourses{
+	list-style-type: none;
+	padding:0px;
 }
+/* coeur de page : semainier*/
 
-.repas {	
+ .repas {	
 	width: 100%;
 	min-height : 200px;
 	margin-bottom: 5px;
@@ -135,21 +120,33 @@ body {
 	background-color: #C2CFF1;
 	text-align: center;
 	cursor: move;	
-}
-.repas.over {
-  border: 2px dashed red;
-  background-color: #327F21;
+	display: block;
 }
 
 
-.element{
-		border: 1px dotted blue;
+.menu{
+	list-style-type:none;
+	width:100%;
+}
+.menu li{
+	float:left;	
+	margin: 5px;
+	width: 12.5%;
 }
 
-#listeDesCourses{
-	list-style-type: none;
-	padding:0px;
-}
+.li_repas{
+	list-style-type:none;
+	padding:2px;	
+	text-align: center;
+	width:100%; 
+	height: 100%;
 
-.placeHolder div { background-color:white !important; border:dashed 1px gray !important; }
+}
+.li_repas li{
+	width:95%;
+	padding:0px;	
+
+}
+	
+.placeHolder div{ background-color:white !important; border:dashed 1px gray !important;min-height : 200px;}
 

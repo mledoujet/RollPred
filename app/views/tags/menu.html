@@ -1,0 +1,34 @@
+*{**** tag qui affiche le menu ****}*
+
+<style>
+#principal {	background-color: #C2CFF1;height: 20px;text-align: center;font-weight: bold;padding: 0;margin:0;boerder:0;}
+#principal li{	float :left;list-style-type: none;width:150px;border:1px solid #EBEFF9;}
+#principal li:hover{	background-color: #cff911;display: block;}
+
+#principal .secondaire {	display:none; list-style-type: none;margin:0;padding:0;border:0; position: relative;z-index: 500;}
+#principal .secondaire li{	float:none;border:0;}
+#principal .secondaire li:hover{background-color: #c8f8ee;	}
+#principal li:hover > .secondaire{display:block;}
+
+
+</style>
+<ul id="principal">
+	<li ><a onclick="alert('bouton');">Fichier</a></li>
+	<li ><a onclick="alert('bouton');">Recette</a>
+		<ul class="secondaire">
+			<li><a onclick="alert('bouton');">saisir</a></li>
+			<li><a onclick="alert('bouton');">importer</a></li>
+			<li><a onclick="alert('bouton');">reimporter</a></li>
+			<li><a onclick="alert('bouton');">deimporter</a></li>
+		</ul>
+	</li>
+	<li><a onclick="alert('bouton');">Aide</a>
+		<ul class="secondaire">
+			<li><a onclick="alert('bouton');">sous Aide</a></li>
+			<li><a onclick="alert('bouton');">sous Aide</a></li>
+			<li><a onclick="alert('bouton');">sous Aide</a></li>
+		</ul>
+	</li>
+</ul>
+
+
