@@ -1,20 +1,21 @@
 #{extends 'main.html' /} #{set title:'RollPred' /}
 
 
+
 <div id="top">
 	<p id='logo' href="/">RollPred</p>
 </div>
-
 #{menu/}
 
 
+<div id=fixed>
 
 <div id="leftlateral" class="lateral">
 	<ul>
 		<li id="entrees">
 			<a href="">Entrees</a>
 			<ul>
-				<li><a href="" onclick='alert("carootes");' >carotte rapées</a></li>
+				<li><a href="" onclick='alert(this.innerhtml());' >carotte rapées</a></li>
 				<li><a href="">friand fromage</a></li>
 				<li><a href="">pamplemousse</a></li>
 			</ul>
@@ -112,6 +113,9 @@
 	</div>
 
 </div>
+
+</div>
+
 <script type="text/javascript">
 		$("#soirs, #midis").dragsort({ dragSelector: "div", dragBetween: true, dragEnd: saveOrder, placeHolderTemplate: "<li class='placeHolder'><div></div></li>" });
 		

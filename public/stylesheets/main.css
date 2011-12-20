@@ -9,10 +9,10 @@ body {
     position: fixed;
     display: block;
     margin:0px;
-    margin-bottom:10px;
+    margin-bottom:5px;
     margin-left: 20px;
     color: #fff;
-    font-size: 48px;
+    font-size: 38px;
     font-weight: bold;
     letter-spacing: -4px;
     text-shadow: 1px 2px 2px #000;
@@ -22,9 +22,10 @@ body {
 #top {
 	text-align: center;
     background: #C2CFF1;
-    height: 50px;
+    height: 40px;
+    width: 300px;
     padding:5px;
-
+        float : right;
 }
 
 #footer {
@@ -149,4 +150,13 @@ body {
 }
 	
 .placeHolder div{ background-color:white !important; border:dashed 1px gray !important;min-height : 200px;}
+
+#fixed{
+	position : fixed;
+}
+
+#fixed > *{
+	z-index: -1;
+}
+
 
